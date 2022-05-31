@@ -13,15 +13,15 @@ CREATE TABLE IF NOT EXISTS singer (
 
 CREATE TABLE IF NOT EXISTS album (
 	id_album SERIAL PRIMARY KEY,
-	name_album VARCHAR(150) not null,
-	RecordYear INTEGER,
-	Id_Singer INTEGER REFERENCES singer (id_singer)
+	name_album VARCHAR(150) NOT NULL,
+	recordyear INTEGER,
+	id_singer INTEGER REFERENCES singer (id_singer)
 );
 
 
 CREATE TABLE IF NOT EXISTS track(
 	id_track SERIAL PRIMARY KEY,
-	Name_track VARCHAR(150),
-	Duration INTEGER, --количество секунд
-	Id_Album INTEGER REFERENCES album (id_album)
+	name_track VARCHAR(150),
+	duration INTEGER, --количество секунд
+	id_album INTEGER REFERENCES album (id_album)
 );
