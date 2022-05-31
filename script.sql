@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS album (
 	id_album SERIAL PRIMARY KEY,
 	name_album VARCHAR(150) not null,
 	RecordYear INTEGER,
-	Id_Singer INTEGER REFERENCES singer (id_genre)
+	Id_Singer INTEGER REFERENCES singer (id_singer)
 );
 
 
@@ -25,5 +25,3 @@ CREATE TABLE IF NOT EXISTS track(
 	Duration INTEGER, --количество секунд
 	Id_Album INTEGER REFERENCES album (id_album)
 );
-	
-	
